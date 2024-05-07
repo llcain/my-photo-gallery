@@ -1,3 +1,57 @@
 body {
   font-size: 35px;
+  background: #000;
+  padding: 10px 50px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  margin: auto;
+  border: #fff solid 5px;
+  background-color: white;
+}
+
+.img-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* make images fille their container */
+img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 300px;
+  height: 587px;
+  margin-right: 10px;
+}
+
+img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* css Grid*/
+.img-grid {
+  display: flex;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+}
+
+/* Media Query for changing grid on bigger screens */
+/* Bigger than phones(tablets) */
+@media only screen and (min-width: 750px) {
+  .img-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Bigger than phones(laptop /desktop)*/
+@media only screen and (min-width: 970px) {
+  img-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }/*# sourceMappingURL=App.css.map */
