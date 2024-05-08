@@ -55,10 +55,7 @@ function App() {
           <img src={photo17} alt='time'/>
           <img src={photo18} alt='watch'/>
           <img src={photo19} alt='teeth'/>
-          <img src={photo20} alt='pillow'/>
-            
-
-          
+          <img src={photo20} alt='pillow'/>            
         </div>
       </div>
     </>
