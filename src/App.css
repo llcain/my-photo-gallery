@@ -11,13 +11,15 @@ h1 {
 
 .container {
   margin: auto;
-  border: #fff solid 5px;
+  border: #aa6060 solid 5px;
   background-color: white;
 }
 
 .img-grid {
   display: flex;
   flex-wrap: wrap;
+  width: 1700px;
+  margin: auto;
 }
 
 /* make images fille their container */
@@ -25,7 +27,7 @@ img {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 300px;
+  width: 400px;
   height: 587px;
   margin-right: 10px;
 }
