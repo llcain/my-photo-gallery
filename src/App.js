@@ -21,7 +21,7 @@ import photo13 from './images/photo13.jpg';
 import photo14 from './images/photo14.jpg';
 import photo15 from './images/photo15.jpg';
 import photo17 from './images/photo17.jpg';
-import photo18 from './images/photo18.jpg';
+import photo26 from './images/photo26.jpg';
 import photo19 from './images/photo19.jpg';
 import photo20 from './images/photo20.jpg';
 
@@ -53,7 +53,7 @@ function App() {
           <img src={photo14} alt='cloud'/>
           <img src={photo15} alt='day'/>
           <img src={photo17} alt='time'/>
-          <img src={photo18} alt='watch'/>
+          <img src={photo26} alt='watch'/>
           <img src={photo19} alt='teeth'/>
           <img src={photo20} alt='pillow'/>            
         </div>
