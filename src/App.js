@@ -1,4 +1,3 @@
-
 import './App.scss';
 import photo21 from './images/photo21.jpg';
 import photo22 from './images/photo22.jpg';
@@ -25,37 +24,21 @@ import photo26 from './images/photo26.jpg';
 import photo19 from './images/photo19.jpg';
 import photo20 from './images/photo20.jpg';
 
-
 function App() {
+  const photos = [
+    photo21, photo22, photo25, photo23, photo1, photo16, photo2, photo3,
+    photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11,
+    photo12, photo13, photo14, photo15, photo17, photo26, photo19, photo20,
+  ];
+
   return (
     <>
       <h1>My Photo Image Gallery</h1>
-      <div className='container'>
-        <div className='img-grid'>
-          <img src={photo21} alt='styling'/>
-          <img src={photo22} alt='laughing'/>
-          <img src={photo25} alt='back'/>
-          <img src={photo23} alt='set'/>
-          <img src={photo1} alt='top'/>
-          <img src={photo16} alt='sit'/>
-          <img src={photo2} alt='chain'/>
-          <img src={photo3} alt='me laughing'/>
-          <img src={photo4} alt='me laugh'/>
-          <img src={photo5} alt='me playing'/>
-          <img src={photo6} alt='me visit'/>
-          <img src={photo7} alt='myself'/>
-          <img src={photo8} alt='shape'/>
-          <img src={photo9} alt='my family'/>
-          <img src={photo10} alt='my name'/>
-          <img src={photo11} alt='change'/>
-          <img src={photo12} alt='feet'/>
-          <img src={photo13} alt='sun'/>
-          <img src={photo14} alt='cloud'/>
-          <img src={photo15} alt='day'/>
-          <img src={photo17} alt='time'/>
-          <img src={photo26} alt='watch'/>
-          <img src={photo19} alt='teeth'/>
-          <img src={photo20} alt='pillow'/>            
+      <div className="container">
+        <div className="img-grid">
+          {photos.map((src, index) => (
+            <img key={index} src={src} alt={`gallery-${index}`} />
+          ))}
         </div>
       </div>
     </>

@@ -1,65 +1,50 @@
-$font-size: 35px;
-
-body {
-  font-size: $font-size;
-  background: #000;
-  padding: 10px 50px;
+/* Container centers the content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
+/* Header */
 h1 {
   text-align: center;
-  color: #fff;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-.container {
-  margin: auto;
-  border: #aa6060 solid 5px;
-  background-color: white;
-}
-
+/* Default: Desktop grid */
 .img-grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1700px;
-  margin: auto;
-}
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 
-/* make images fille their container */
+  img {
+    width: 100%;
+    height: 250px;       // uniform height
+    object-fit: cover;   // crop nicely
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 
-img {
-  max-width: 100%;
-  object-fit: cover;
-  width: 400px;
-  height: 587px;
-  margin-right: 10px;
-}
-
-img:hover {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-/* css Grid*/
-
-.img-grid {
-  display: flex;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 5px;
-}
-
-/* Media Query for changing grid on bigger screens */
-
-/* Bigger than phones(tablets) */
-@media only screen and (min-width: 750px) {
-  .img-grid {
-    grid-template-columns: repeat(2, 1fr);
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
-/* Bigger than phones(laptop /desktop)*/
+/* Mobile: stack vertically in one column */
+@media (max-width: 768px) {
+  .img-grid {
+    display: grid;
+    grid-template-columns: 1fr;   // single column
+    gap: 1rem;
 
-@media only screen and (min-width: 970px) {
-  img-grid {
-    grid-template-columns: repeat(4, 1fr);
+    img {
+      width: 100%;         
+      object-fit: cover;
+      height: 250px;      
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      }
   }
 }
